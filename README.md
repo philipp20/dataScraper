@@ -1,9 +1,13 @@
 # dataScraper
-### Description
-Python script that scrapes data from a local html file and outputs the scraped data into an excel (csv) file
+### Description:
+Python script that scrapes data from a local html file and outputs the scraped data into an excel (csv) file <br>
 
-<br><br>
-Sample output:
+### Future Improvements:
+* Dynamic html file to be scraped.
+* Directly downloads the html page from the URL provided. <br>
+  Challenge: Some websites have anti-bot protection that restricts automation scripts from accesing it.
+
+### Sample output:
 
 | Job Title                         | Salary           | Location                                      | Work Setup | Job Type  | Company Name                                                                 | Qualifications                                                                                                                                                                                                                                      | Tools                                                                                                        |
 |-----------------------------------|------------------|-----------------------------------------------|-------------|------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
@@ -11,3 +15,5 @@ Sample output:
 | Marketing Director                | `<Data Unavailable>` | United States                                | Remote      | Full Time  | ISG (Information Services Group): Global technology and management consulting firm. | 5+ YOE Lead B2B marketing with AI-centric strategies; remote with travel; 5+ years in marketing at a large firm; strong storytelling, PM, stakeholder mgmt; Bachelor’s in marketing or communications.                                                | Marketing automation, Analytics tools, AI-based tools                                                        |
 | Senior Director Product Marketing | $150k-$180k/yr   | United States                                | Remote      | Full Time  | Cotiviti: Healthcare technology.                                             | 7+ YOE Senior Director of Product Marketing with 7+ years in healthcare marketing, strategic planning, market research, messaging, and content leadership.                                                                                           | Marketing automation, Content management, Salesforce, Adobe Creative Suite, Google Analytics                 |
 | Senior Director, Digital Marketing | $130k-$140k/yr  | United States                                | Remote      | Full Time  | Noodle Partners: Independent education technology that partners with universities to improve learning outcomes. | 8+ YOE 5+ Mgmt 8+ years digital marketing, 5+ in leadership; Bachelor’s degree or equivalent; proven leadership; hands-on paid media expertise; higher education marketing preferred.                                                               | Google Ads, Meta (Facebook), LinkedIn, YouTube, Programmatic Advertising, Affiliate Marketing, Marketing Analytics |
+
+<br><br>
