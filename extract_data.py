@@ -1,3 +1,46 @@
+import importlib
+import sys
+import subprocess
+import os
+
+# === Dependency Check with Persistent Marker ===
+# Added this to make sure that before running the script,
+# all dependencies are already installed
+marker_file = ".deps_installed"
+
+if not os.path.exists(marker_file):
+    print("🔍 Checking and installing required libraries...")
+
+    required_libraries = {
+        "requests": "requests",
+        "bs4": "beautifulsoup4",
+        "pandas": "pandas"
+    }
+
+    def install_and_import(import_name, package_name):
+        try:
+            importlib.import_module(import_name)
+            print(f"✅ {import_name} already installed.")
+        except ImportError:
+            print(f"⚠️ {import_name} not found. Installing {package_name}...")
+            subprocess.check_call([sys.executable, "-m", "pip", "install", package_name])
+            print(f"✅ {package_name} installed successfully.")
+
+    for import_name, package_name in required_libraries.items():
+        install_and_import(import_name, package_name)
+
+    # Create marker file after successful setup
+    with open(marker_file, "w") as f:
+        f.write("Dependencies installed successfully.\n")
+
+    print("✅ All required libraries are installed and verified.")
+else:
+    print("🟢 Dependencies previously verified. Skipping check.")
+
+
+
+# === Main Script ===
+
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
